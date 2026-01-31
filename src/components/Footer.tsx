@@ -6,7 +6,6 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex gap-6">
-            <Link to="/#reservations" className="text-tavern-silver hover:text-tavern-white transition-colors">Reservations</Link>
             <Link to="/" className="text-tavern-silver hover:text-tavern-white transition-colors">Email Signup</Link>
           </div>
           <div className="flex gap-6">

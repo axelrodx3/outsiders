@@ -40,7 +40,6 @@ export default function Nav() {
               </button>
               {openDropdown === 'about' && (
                 <div className="absolute top-full left-0 mt-1 py-2 w-48 bg-tavern-charcoal rounded shadow-xl border border-tavern-gray">
-                  <Link to="/#history" className="block px-4 py-2 text-tavern-white/90 hover:bg-tavern-gray hover:text-tavern-white">Our History</Link>
                   <Link to="/about" className="block px-4 py-2 text-tavern-white/90 hover:bg-tavern-gray hover:text-tavern-white">Our Team</Link>
                   <Link to="/about" className="block px-4 py-2 text-tavern-white/90 hover:bg-tavern-gray hover:text-tavern-white">FAQs</Link>
                 </div>
@@ -49,7 +48,6 @@ export default function Nav() {
             <Link to="/events" className="text-tavern-white/90 hover:text-tavern-white transition-colors">Live Events</Link>
             <Link to="/gallery" className="text-tavern-white/90 hover:text-tavern-white transition-colors">Photo Gallery</Link>
             <Link to="/" className="text-tavern-white/90 hover:text-tavern-white transition-colors">Gift Cards</Link>
-            <Link to="/#reservations" className="px-4 py-2 bg-white text-tavern-black font-semibold rounded hover:bg-tavern-offwhite transition-colors">Reservations</Link>
           </div>
         </div>
       </div>
