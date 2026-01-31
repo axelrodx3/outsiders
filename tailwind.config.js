@@ -12,10 +12,13 @@ export default {
       },
       colors: {
         tavern: {
-          dark: '#1a1510',
-          wood: '#2d2419',
-          amber: '#c9a227',
-          cream: '#f5ebe0',
+          black: '#0a0a0a',
+          dark: '#111111',
+          charcoal: '#1a1a1a',
+          gray: '#2d2d2d',
+          silver: '#a0a0a0',
+          white: '#f5f5f5',
+          offwhite: '#e5e5e5',
         }
       }
     },
