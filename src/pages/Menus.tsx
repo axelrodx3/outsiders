@@ -205,7 +205,7 @@ export default function Menus() {
             <h2 className="font-display text-2xl font-semibold text-tavern-white">Taco Tuesday Specials</h2>
           </div>
           <div className="space-y-5">
-            <h3 className="font-display text-lg font-semibold text-tavern-silver/90">Appetizers</h3>
+            <h3 className="font-display text-lg font-semibold text-tavern-white">Appetizers</h3>
             <div>
               <div className="flex justify-between items-baseline gap-4">
                 <h4 className="font-slab text-base font-medium text-tavern-offwhite">Chips & Salsa</h4>
@@ -219,7 +219,7 @@ export default function Menus() {
               </div>
               <p className="text-tavern-silver/90 text-sm mt-1">Fried mozzarella sticks with marinara.</p>
             </div>
-            <h3 className="font-display text-lg font-semibold text-tavern-silver/90 mt-6">Tacos (individual)</h3>
+            <h3 className="font-display text-lg font-semibold text-tavern-white mt-6">Tacos (individual)</h3>
             <div className="grid gap-3">
               <div className="flex justify-between items-baseline gap-4">
                 <span className="font-slab text-tavern-offwhite">Beef</span>
@@ -238,7 +238,7 @@ export default function Menus() {
                 <span className="text-tavern-silver">$4</span>
               </div>
             </div>
-            <h3 className="font-display text-lg font-semibold text-tavern-silver/90 mt-6">Quesadillas</h3>
+            <h3 className="font-display text-lg font-semibold text-tavern-white mt-6">Quesadillas</h3>
             <div className="grid gap-3">
               <div className="flex justify-between items-baseline gap-4">
                 <span className="font-slab text-tavern-offwhite">Cheese</span>
