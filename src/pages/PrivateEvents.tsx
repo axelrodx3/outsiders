@@ -4,7 +4,7 @@ export default function PrivateEvents() {
       <div className="max-w-4xl mx-auto">
         <h1 className="font-display text-4xl font-semibold text-tavern-white mb-8">Live Events</h1>
         <p className="text-tavern-silver text-lg leading-relaxed mb-8">
-          Every weekend, Outsiders Tavern brings the stage to life with live bands from rock and blues to acoustic sets. If you're in a band and want to take the stage, we'd love to hear from you. Reach out and let's make it happen.
+          Every weekend, Outsiders Tavern brings the stage to life with live bands from rock and blues to acoustic sets. If you're in a band and want to take the stage, we'd love to hear from you.
         </p>
         <div className="bg-tavern-charcoal rounded-lg p-8 border border-tavern-gray">
           <h2 className="font-display text-xl font-semibold text-tavern-white mb-4">Get in Touch</h2>
