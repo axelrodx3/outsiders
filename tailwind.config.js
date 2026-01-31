@@ -7,8 +7,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        display: ['Playfair Display', 'serif'],
-        body: ['Source Sans 3', 'sans-serif'],
+        display: ['Bebas Neue', 'sans-serif'],
+        slab: ['Roboto Slab', 'serif'],
       },
       colors: {
         tavern: {

@@ -28,7 +28,7 @@ export default function Home() {
         <h1 className="sr-only">Outsiders Tavern - Restaurant & Bar</h1>
         <div className="max-w-6xl mx-auto text-center">
           <img src="/logo.png" alt="Outsiders Tavern" className="max-w-[280px] md:max-w-[320px] h-auto invert mx-auto mb-6" />
-          <p className="text-tavern-silver text-lg md:text-xl font-body max-w-md mx-auto">
+          <p className="text-tavern-silver text-lg md:text-xl font-slab max-w-md mx-auto">
             Good food. Cold drinks. Great company.
           </p>
         </div>
