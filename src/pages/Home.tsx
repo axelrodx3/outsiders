@@ -9,7 +9,7 @@ export default function Home() {
   const [emailForm, setEmailForm] = useState({ firstName: '', lastName: '', email: '', location: '' })
 
   const locations = [
-    { name: 'Outsiders Tavern', address: '4124 Celanese Rd #130, Rock Hill, SC 29732', phone: '(803) 328-9200', slug: 'rock-hill', mapsUrl: 'https://www.google.com/maps/place/Outsiders+Tavern/@34.9790614,-81.0653751,17z' },
+    { name: 'Outsiders Tavern', address: '4124 Celanese Rd #130, Rock Hill, SC 29732', phone: '(803) 328-9200', slug: 'rock-hill', mapsUrl: 'https://www.google.com/maps/place/Outsiders+Tavern/@34.9790614,-81.0653751,17z', embedUrl: 'https://www.google.com/maps?q=Outsiders+Tavern+4124+Celanese+Rd+Rock+Hill+SC+29732&output=embed' },
   ]
 
   const historyItems = [
@@ -43,13 +43,16 @@ export default function Home() {
           <div id="locations" className="grid md:grid-cols-1 max-w-2xl mx-auto gap-8">
             {locations.map((loc) => (
               <div key={loc.slug} className="bg-tavern-charcoal rounded-lg overflow-hidden border border-tavern-gray">
-                <a href={loc.mapsUrl} target="_blank" rel="noopener noreferrer" className="h-48 w-full overflow-hidden bg-tavern-black flex flex-col items-center justify-center gap-3 group hover:bg-tavern-gray/30 transition-colors">
-                  <svg className="w-12 h-12 text-tavern-silver group-hover:text-tavern-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                  <span className="text-tavern-silver group-hover:text-tavern-white transition-colors font-slab">View Outsiders Tavern on Google Maps</span>
-                </a>
+                <div className="h-48 w-full overflow-hidden bg-tavern-black">
+                  <iframe
+                    title="Outsiders Tavern location"
+                    src={loc.embedUrl}
+                    className="w-full h-full border-0"
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
+                </div>
                 <div className="p-6">
                   <h3 className="font-display text-2xl font-semibold text-tavern-white">{loc.name}</h3>
                   <a href={loc.mapsUrl} target="_blank" rel="noopener noreferrer" className="mt-2 block text-tavern-silver hover:text-tavern-white transition-colors">
