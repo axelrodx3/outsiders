@@ -27,7 +27,12 @@ export default function Home() {
       <section className="pt-28 pb-16 px-6 bg-tavern-black">
         <h1 className="sr-only">Outsiders Tavern - Restaurant & Bar</h1>
         <div className="max-w-6xl mx-auto text-center">
-          <img src="/logo.png" alt="Outsiders Tavern" className="max-w-[280px] md:max-w-[320px] h-auto invert mx-auto mb-6" />
+          <img
+            src="/logo.png?v=2"
+            alt="Outsiders Tavern"
+            className="max-w-[280px] md:max-w-[320px] h-auto mx-auto mb-6 [filter:invert(1)]"
+            style={{ background: 'transparent' }}
+          />
           <p className="text-tavern-silver text-lg md:text-xl font-slab max-w-md mx-auto">
             Good food. Cold drinks. Great company.
           </p>

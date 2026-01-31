@@ -6,3 +6,7 @@ body {
   font-family: 'Roboto Slab', serif;
   background-color: #0a0a0a;
 }
+
+img[alt="Outsiders Tavern"] {
+  background: transparent !important;
+}
