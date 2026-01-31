@@ -5,10 +5,16 @@ export default function Contact() {
         <h1 className="font-display text-4xl font-semibold text-tavern-white mb-8">Contact</h1>
         <div className="space-y-6 text-tavern-silver">
           <p>
-            <a href="mailto:outsiderstavern@gmail.com" className="text-tavern-white hover:underline">outsiderstavern@gmail.com</a>
+            <a href="https://maps.google.com/?q=4124+Celanese+Rd+Ste+130+Rock+Hill+SC+29732" target="_blank" rel="noopener noreferrer" className="text-tavern-white hover:underline">
+              4124 Celanese Rd Ste 130<br />
+              Rock Hill, SC 29732
+            </a>
           </p>
           <p>
             <a href="tel:+18033289200" className="text-tavern-white hover:underline">(803) 328-9200</a>
+          </p>
+          <p>
+            <a href="mailto:outsiderstavern@gmail.com" className="text-tavern-white hover:underline">outsiderstavern@gmail.com</a>
           </p>
         </div>
       </div>

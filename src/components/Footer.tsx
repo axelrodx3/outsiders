@@ -20,7 +20,7 @@ export default function Footer() {
           </div>
         </div>
         <p className="mt-8 text-center text-tavern-silver/80 text-sm">
-          Outsiders Tavern · <a href="mailto:outsiderstavern@gmail.com" className="hover:text-tavern-white transition-colors">outsiderstavern@gmail.com</a> · <a href="tel:+18033289200" className="hover:text-tavern-white transition-colors">(803) 328-9200</a>
+          Outsiders Tavern · 4124 Celanese Rd Ste 130, Rock Hill, SC 29732 · <a href="mailto:outsiderstavern@gmail.com" className="hover:text-tavern-white transition-colors">outsiderstavern@gmail.com</a> · <a href="tel:+18033289200" className="hover:text-tavern-white transition-colors">(803) 328-9200</a>
         </p>
       </div>
     </footer>

@@ -9,10 +9,13 @@ export default function PrivateEvents() {
         <div className="bg-tavern-charcoal rounded-lg p-8 border border-tavern-gray">
           <h2 className="font-display text-xl font-semibold text-tavern-white mb-4">Get in Touch</h2>
           <p className="text-tavern-silver">
-            <a href="mailto:outsiderstavern@gmail.com" className="text-tavern-white hover:underline">outsiderstavern@gmail.com</a>
+            <a href="https://maps.google.com/?q=4124+Celanese+Rd+Ste+130+Rock+Hill+SC+29732" target="_blank" rel="noopener noreferrer" className="text-tavern-white hover:underline">4124 Celanese Rd Ste 130, Rock Hill, SC 29732</a>
           </p>
           <p className="text-tavern-silver mt-2">
             <a href="tel:+18033289200" className="text-tavern-white hover:underline">(803) 328-9200</a>
+          </p>
+          <p className="text-tavern-silver mt-2">
+            <a href="mailto:outsiderstavern@gmail.com" className="text-tavern-white hover:underline">outsiderstavern@gmail.com</a>
           </p>
         </div>
       </div>

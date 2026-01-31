@@ -2,7 +2,6 @@ import { useState } from 'react'
 
 export default function Home() {
   const [reservationForm, setReservationForm] = useState({
-    location: '',
     partySize: '',
     date: '',
     time: '',
@@ -10,14 +9,13 @@ export default function Home() {
   const [emailForm, setEmailForm] = useState({ firstName: '', lastName: '', email: '', location: '' })
 
   const locations = [
-    { name: 'Main Street', address: '123 Main Street, Your City, ST 12345', phone: '(803) 328-9200', slug: 'main-street' },
-    { name: 'Downtown', address: '456 Oak Ave, Downtown, ST 12346', phone: '(803) 328-9200', slug: 'downtown' },
+    { name: 'Outsiders Tavern', address: '4124 Celanese Rd Ste 130, Rock Hill, SC 29732', phone: '(803) 328-9200', slug: 'rock-hill', mapsUrl: 'https://maps.google.com/?q=4124+Celanese+Rd+Ste+130+Rock+Hill+SC+29732' },
   ]
 
   const historyItems = [
     { year: '2020', title: 'Outsiders Tavern Opens', desc: 'We opened our doors with a vision to create a neighborhood gathering place for good food and great company.' },
     { year: '2021', title: 'Expanded Menu', desc: 'Launched our full kitchen with chef-inspired pub fare and an extensive craft beer selection.' },
-    { year: '2023', title: 'Second Location', desc: 'Opened our Downtown location to serve more of the community.' },
+    { year: '2023', title: 'Settled in Rock Hill', desc: 'Opened our doors at 4124 Celanese Rd, bringing the tavern vibe to Rock Hill.' },
     { year: '2025', title: 'Live Events Stage', desc: 'Launched our weekend live music series, bringing bands to the stage every Friday and Saturday night.' },
   ]
 
@@ -41,8 +39,8 @@ export default function Home() {
       {/* Location Cards */}
       <section className="pt-4 pb-16 px-6 bg-tavern-dark">
         <div className="max-w-6xl mx-auto">
-          <h2 className="font-display text-3xl md:text-4xl font-semibold text-tavern-white text-center mb-12">Our Locations</h2>
-          <div id="locations" className="grid md:grid-cols-2 gap-8">
+          <h2 className="font-display text-3xl md:text-4xl font-semibold text-tavern-white text-center mb-12">Our Location</h2>
+          <div id="locations" className="grid md:grid-cols-1 max-w-2xl mx-auto gap-8">
             {locations.map((loc) => (
               <div key={loc.slug} className="bg-tavern-charcoal rounded-lg overflow-hidden border border-tavern-gray">
                 <div className="h-48 bg-tavern-black flex items-center justify-center text-tavern-silver/50">
@@ -50,14 +48,16 @@ export default function Home() {
                 </div>
                 <div className="p-6">
                   <h3 className="font-display text-2xl font-semibold text-tavern-white">{loc.name}</h3>
-                  <p className="mt-2 text-tavern-silver">{loc.address}</p>
+                  <a href={loc.mapsUrl} target="_blank" rel="noopener noreferrer" className="mt-2 block text-tavern-silver hover:text-tavern-white transition-colors">
+                    {loc.address}
+                  </a>
                   <p className="mt-1 text-tavern-silver/90">{loc.phone}</p>
                   <div className="mt-4 flex gap-3">
                     <a href="#reservations" className="px-4 py-2 bg-white text-tavern-black font-semibold rounded hover:bg-tavern-offwhite transition-colors">
                       Reservations
                     </a>
-                    <a href="#" className="px-4 py-2 border border-tavern-white text-tavern-white rounded hover:bg-tavern-white/10 transition-colors">
-                      Learn More
+                    <a href={loc.mapsUrl} target="_blank" rel="noopener noreferrer" className="px-4 py-2 border border-tavern-white text-tavern-white rounded hover:bg-tavern-white/10 transition-colors">
+                      Get Directions
                     </a>
                   </div>
                 </div>
@@ -135,18 +135,6 @@ export default function Home() {
             className="space-y-4"
           >
             <div>
-              <label className="block text-tavern-silver mb-1">Location</label>
-              <select
-                value={reservationForm.location}
-                onChange={(e) => setReservationForm({ ...reservationForm, location: e.target.value })}
-                className="w-full px-4 py-2 bg-tavern-dark border border-tavern-gray rounded text-tavern-white"
-              >
-                <option value="">Select location</option>
-                <option value="main">Main Street</option>
-                <option value="downtown">Downtown</option>
-              </select>
-            </div>
-            <div>
               <label className="block text-tavern-silver mb-1">Party Size</label>
               <select
                 value={reservationForm.partySize}
@@ -218,15 +206,6 @@ export default function Home() {
               onChange={(e) => setEmailForm({ ...emailForm, email: e.target.value })}
               className="w-full px-4 py-2 bg-tavern-charcoal border border-tavern-gray rounded text-tavern-white placeholder-tavern-silver/60"
             />
-            <select
-              value={emailForm.location}
-              onChange={(e) => setEmailForm({ ...emailForm, location: e.target.value })}
-              className="w-full px-4 py-2 bg-tavern-charcoal border border-tavern-gray rounded text-tavern-white"
-            >
-              <option value="">Location (optional)</option>
-              <option value="main">Main Street</option>
-              <option value="downtown">Downtown</option>
-            </select>
             <button type="submit" className="w-full py-3 bg-white text-tavern-black font-semibold rounded hover:bg-tavern-offwhite transition-colors">
               Submit
             </button>

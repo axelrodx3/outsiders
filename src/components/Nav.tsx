@@ -12,23 +12,7 @@ export default function Nav() {
             Outsiders Tavern
           </Link>
           <div className="hidden md:flex items-center gap-6">
-            {/* Locations */}
-            <div
-              className="relative"
-              onMouseEnter={() => setOpenDropdown('locations')}
-              onMouseLeave={() => setOpenDropdown(null)}
-            >
-              <button className="text-tavern-white/90 hover:text-tavern-white transition-colors">
-                Locations ▾
-              </button>
-              {openDropdown === 'locations' && (
-                <div className="absolute top-full left-0 mt-1 py-2 w-48 bg-tavern-charcoal rounded shadow-xl border border-tavern-gray">
-                  <Link to="/#locations" className="block px-4 py-2 text-tavern-white/90 hover:bg-tavern-gray hover:text-tavern-white">All Locations</Link>
-                  <Link to="/#locations" className="block px-4 py-2 text-tavern-white/90 hover:bg-tavern-gray hover:text-tavern-white">Main Street</Link>
-                  <Link to="/#locations" className="block px-4 py-2 text-tavern-white/90 hover:bg-tavern-gray hover:text-tavern-white">Downtown</Link>
-                </div>
-              )}
-            </div>
+            <a href="/#locations" className="text-tavern-white/90 hover:text-tavern-white transition-colors">Location</a>
             {/* Menus */}
             <div
               className="relative"
