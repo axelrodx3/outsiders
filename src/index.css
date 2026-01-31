@@ -10,3 +10,18 @@ body {
 img[alt="Outsiders Tavern"] {
   background: transparent !important;
 }
+
+/* Text outline for better readability - helps older users read white text on dark background */
+.font-display,
+[class*="text-tavern-white"].font-semibold,
+[class*="text-tavern-white"].font-medium,
+[class*="text-tavern-white"].font-bold,
+[class*="text-tavern-offwhite"].font-semibold,
+[class*="text-tavern-offwhite"].font-medium {
+  text-shadow:
+    -1px -1px 0 rgba(0, 0, 0, 0.6),
+    1px -1px 0 rgba(0, 0, 0, 0.6),
+    -1px 1px 0 rgba(0, 0, 0, 0.6),
+    1px 1px 0 rgba(0, 0, 0, 0.6),
+    0 0 4px rgba(0, 0, 0, 0.4);
+}
