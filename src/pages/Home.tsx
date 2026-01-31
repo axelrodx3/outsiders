@@ -23,15 +23,18 @@ export default function Home() {
 
   return (
     <div className="text-tavern-white">
-      {/* Logo Hero */}
-      <section className="pt-28 pb-12 px-6 bg-tavern-black">
+      {/* Hero - Welcome */}
+      <section className="pt-28 pb-16 px-6 bg-tavern-black">
         <h1 className="sr-only">Outsiders Tavern - Restaurant & Bar</h1>
-        <div className="max-w-2xl mx-auto">
-          <img src="/logo.png" alt="Outsiders Tavern" className="w-full h-auto invert mx-auto" />
+        <div className="max-w-6xl mx-auto text-center">
+          <img src="/logo.png" alt="Outsiders Tavern" className="max-w-[280px] md:max-w-[320px] h-auto invert mx-auto mb-6" />
+          <p className="text-tavern-silver text-lg md:text-xl font-body max-w-md mx-auto">
+            Good food. Cold drinks. Great company.
+          </p>
         </div>
       </section>
       {/* Location Cards */}
-      <section className="pt-8 pb-16 px-6 bg-tavern-dark">
+      <section className="pt-4 pb-16 px-6 bg-tavern-dark">
         <div className="max-w-6xl mx-auto">
           <h2 className="font-display text-3xl md:text-4xl font-semibold text-tavern-white text-center mb-12">Our Locations</h2>
           <div id="locations" className="grid md:grid-cols-2 gap-8">

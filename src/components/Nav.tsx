@@ -8,8 +8,8 @@ export default function Nav() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-tavern-black/95 backdrop-blur border-b border-tavern-gray">
       <div className="max-w-6xl mx-auto px-6 py-3">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center">
-            <img src="/logo.png" alt="Outsiders Tavern" className="h-14 md:h-16 w-auto object-contain invert" />
+          <Link to="/" className="font-display text-xl font-semibold text-tavern-white hover:text-tavern-offwhite transition-colors">
+            Outsiders Tavern
           </Link>
           <div className="hidden md:flex items-center gap-6">
             {/* Locations */}
