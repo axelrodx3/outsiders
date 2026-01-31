@@ -13,28 +13,28 @@ export default function Menus() {
           <div className="space-y-5">
             <div>
               <div className="flex justify-between items-baseline gap-4">
-                <h3 className="font-display text-lg font-semibold text-tavern-white">Shrimp & Grits</h3>
+                <h3 className="font-slab text-base font-medium text-tavern-offwhite">Shrimp & Grits</h3>
                 <span className="text-tavern-silver whitespace-nowrap">$18</span>
               </div>
               <p className="text-tavern-silver/90 text-sm mt-1">Creamy cheese grits with blackened shrimp, topped with chopped bacon and scallions.</p>
             </div>
             <div>
               <div className="flex justify-between items-baseline gap-4">
-                <h3 className="font-display text-lg font-semibold text-tavern-white">Steak Breakfast Platter</h3>
+                <h3 className="font-slab text-base font-medium text-tavern-offwhite">Steak Breakfast Platter</h3>
                 <span className="text-tavern-silver whitespace-nowrap">$28</span>
               </div>
               <p className="text-tavern-silver/90 text-sm mt-1">10 oz NY Strip with two eggs, breakfast potatoes, and choice of toast.</p>
             </div>
             <div>
               <div className="flex justify-between items-baseline gap-4">
-                <h3 className="font-display text-lg font-semibold text-tavern-white">Burrito</h3>
+                <h3 className="font-slab text-base font-medium text-tavern-offwhite">Burrito</h3>
                 <span className="text-tavern-silver whitespace-nowrap">$13</span>
               </div>
               <p className="text-tavern-silver/90 text-sm mt-1">Scrambled eggs, breakfast potatoes, cheddar cheese, with choice of bacon or sausage in a flour tortilla. Served with a side of salsa.</p>
             </div>
             <div>
               <div className="flex justify-between items-baseline gap-4">
-                <h3 className="font-display text-lg font-semibold text-tavern-white">Bottomless Mimosas</h3>
+                <h3 className="font-slab text-base font-medium text-tavern-offwhite">Bottomless Mimosas</h3>
                 <span className="text-tavern-silver whitespace-nowrap">$15</span>
               </div>
               <p className="text-tavern-silver/90 text-sm mt-1">(2 hour limit)</p>
@@ -50,14 +50,14 @@ export default function Menus() {
           <div className="space-y-5">
             <div>
               <div className="flex justify-between items-baseline gap-4">
-                <h3 className="font-display text-lg font-semibold text-tavern-white">The Choppa</h3>
+                <h3 className="font-slab text-base font-medium text-tavern-offwhite">The Choppa</h3>
                 <span className="text-tavern-silver whitespace-nowrap">$15</span>
               </div>
               <p className="text-tavern-silver/90 text-sm mt-1">Mixed greens, grilled chicken, chopped bacon, cherry tomatoes, cucumber, red onion, cheddar cheese, croutons, choice of dressing.</p>
             </div>
             <div>
               <div className="flex justify-between items-baseline gap-4">
-                <h3 className="font-display text-lg font-semibold text-tavern-white">The Metalhead</h3>
+                <h3 className="font-slab text-base font-medium text-tavern-offwhite">The Metalhead</h3>
                 <span className="text-tavern-silver whitespace-nowrap">$12</span>
               </div>
               <p className="text-tavern-silver/90 text-sm mt-1">Arugula, spring mix, dried cranberries, candied walnuts, cucumber, red onion, feta cheese, honey balsamic vinaigrette. Add grilled chicken +$5</p>
@@ -74,14 +74,14 @@ export default function Menus() {
           <div className="space-y-5">
             <div>
               <div className="flex justify-between items-baseline gap-4">
-                <h3 className="font-display text-lg font-semibold text-tavern-white">Eastbound & Down</h3>
+                <h3 className="font-slab text-base font-medium text-tavern-offwhite">Eastbound & Down</h3>
                 <span className="text-tavern-silver whitespace-nowrap">$13</span>
               </div>
               <p className="text-tavern-silver/90 text-sm mt-1">Pulled pork, mac & cheese, BBQ sauce, pickled jalapeños, toasted brioche bun.</p>
             </div>
             <div>
               <div className="flex justify-between items-baseline gap-4">
-                <h3 className="font-display text-lg font-semibold text-tavern-white">Studio 54</h3>
+                <h3 className="font-slab text-base font-medium text-tavern-offwhite">Studio 54</h3>
                 <span className="text-tavern-silver whitespace-nowrap">$14</span>
               </div>
               <p className="text-tavern-silver/90 text-sm mt-1">Grilled chicken, bacon, swiss cheese, lettuce, tomato, red onion, spicy mayo, toasted brioche bun.</p>
@@ -97,21 +97,21 @@ export default function Menus() {
           <div className="space-y-5">
             <div>
               <div className="flex justify-between items-baseline gap-4">
-                <h3 className="font-display text-lg font-semibold text-tavern-white">Bang Bang Shrimp</h3>
+                <h3 className="font-slab text-base font-medium text-tavern-offwhite">Bang Bang Shrimp</h3>
                 <span className="text-tavern-silver whitespace-nowrap">$14</span>
               </div>
               <p className="text-tavern-silver/90 text-sm mt-1">Fried shrimp tossed in spicy aioli.</p>
             </div>
             <div>
               <div className="flex justify-between items-baseline gap-4">
-                <h3 className="font-display text-lg font-semibold text-tavern-white">Loaded Tater Tots</h3>
+                <h3 className="font-slab text-base font-medium text-tavern-offwhite">Loaded Tater Tots</h3>
                 <span className="text-tavern-silver whitespace-nowrap">$12</span>
               </div>
               <p className="text-tavern-silver/90 text-sm mt-1">Topped with cheese, bacon, sour cream, scallions.</p>
             </div>
             <div>
               <div className="flex justify-between items-baseline gap-4">
-                <h3 className="font-display text-lg font-semibold text-tavern-white">Fried Pickles</h3>
+                <h3 className="font-slab text-base font-medium text-tavern-offwhite">Fried Pickles</h3>
                 <span className="text-tavern-silver whitespace-nowrap">$9</span>
               </div>
               <p className="text-tavern-silver/90 text-sm mt-1">Served with ranch dressing.</p>
@@ -128,21 +128,21 @@ export default function Menus() {
           <div className="space-y-5">
             <div>
               <div className="flex justify-between items-baseline gap-4">
-                <h3 className="font-display text-lg font-semibold text-tavern-white">Cowboy from Hell</h3>
+                <h3 className="font-slab text-base font-medium text-tavern-offwhite">Cowboy from Hell</h3>
                 <span className="text-tavern-silver whitespace-nowrap">$16</span>
               </div>
               <p className="text-tavern-silver/90 text-sm mt-1">Bacon, cheddar, BBQ sauce, onion rings.</p>
             </div>
             <div>
               <div className="flex justify-between items-baseline gap-4">
-                <h3 className="font-display text-lg font-semibold text-tavern-white">Intergalactic Burger</h3>
+                <h3 className="font-slab text-base font-medium text-tavern-offwhite">Intergalactic Burger</h3>
                 <span className="text-tavern-silver whitespace-nowrap">$15</span>
               </div>
               <p className="text-tavern-silver/90 text-sm mt-1">Swiss cheese, sautéed mushrooms, caramelized onions.</p>
             </div>
             <div>
               <div className="flex justify-between items-baseline gap-4">
-                <h3 className="font-display text-lg font-semibold text-tavern-white">The Headbanger</h3>
+                <h3 className="font-slab text-base font-medium text-tavern-offwhite">The Headbanger</h3>
                 <span className="text-tavern-silver whitespace-nowrap">$16</span>
               </div>
               <p className="text-tavern-silver/90 text-sm mt-1">American cheese, bacon, lettuce, tomato, onion, special sauce.</p>
@@ -158,7 +158,7 @@ export default function Menus() {
           <div className="space-y-5">
             <div>
               <div className="flex justify-between items-baseline gap-4">
-                <h3 className="font-display text-lg font-semibold text-tavern-white">Classic Hot Dog</h3>
+                <h3 className="font-slab text-base font-medium text-tavern-offwhite">Classic Hot Dog</h3>
                 <span className="text-tavern-silver whitespace-nowrap">$8</span>
               </div>
               <p className="text-tavern-silver/90 text-sm mt-1">All beef hot dog with choice of toppings.</p>
@@ -174,25 +174,25 @@ export default function Menus() {
           <div className="space-y-5">
             <div>
               <div className="flex justify-between items-baseline gap-4">
-                <h3 className="font-display text-lg font-semibold text-tavern-white">Fries</h3>
+                <h3 className="font-slab text-base font-medium text-tavern-offwhite">Fries</h3>
                 <span className="text-tavern-silver whitespace-nowrap">$4</span>
               </div>
             </div>
             <div>
               <div className="flex justify-between items-baseline gap-4">
-                <h3 className="font-display text-lg font-semibold text-tavern-white">Tater Tots</h3>
+                <h3 className="font-slab text-base font-medium text-tavern-offwhite">Tater Tots</h3>
                 <span className="text-tavern-silver whitespace-nowrap">$5</span>
               </div>
             </div>
             <div>
               <div className="flex justify-between items-baseline gap-4">
-                <h3 className="font-display text-lg font-semibold text-tavern-white">Southern Style Potato Salad</h3>
+                <h3 className="font-slab text-base font-medium text-tavern-offwhite">Southern Style Potato Salad</h3>
                 <span className="text-tavern-silver whitespace-nowrap">$4</span>
               </div>
             </div>
             <div>
               <div className="flex justify-between items-baseline gap-4">
-                <h3 className="font-display text-lg font-semibold text-tavern-white">Onion Rings</h3>
+                <h3 className="font-slab text-base font-medium text-tavern-offwhite">Onion Rings</h3>
                 <span className="text-tavern-silver whitespace-nowrap">$6</span>
               </div>
             </div>
@@ -208,13 +208,13 @@ export default function Menus() {
             <h3 className="font-display text-lg font-semibold text-tavern-silver/90">Appetizers</h3>
             <div>
               <div className="flex justify-between items-baseline gap-4">
-                <h4 className="font-slab text-base font-medium text-tavern-white">Chips & Salsa</h4>
+                <h4 className="font-slab text-base font-medium text-tavern-offwhite">Chips & Salsa</h4>
                 <span className="text-tavern-silver whitespace-nowrap">$6</span>
               </div>
             </div>
             <div>
               <div className="flex justify-between items-baseline gap-4">
-                <h4 className="font-slab text-base font-medium text-tavern-white">Nikki Stixx</h4>
+                <h4 className="font-slab text-base font-medium text-tavern-offwhite">Nikki Stixx</h4>
                 <span className="text-tavern-silver whitespace-nowrap">$11</span>
               </div>
               <p className="text-tavern-silver/90 text-sm mt-1">Fried mozzarella sticks with marinara.</p>
@@ -222,40 +222,40 @@ export default function Menus() {
             <h3 className="font-display text-lg font-semibold text-tavern-silver/90 mt-6">Tacos (individual)</h3>
             <div className="grid gap-3">
               <div className="flex justify-between items-baseline gap-4">
-                <span className="text-tavern-white">Beef</span>
+                <span className="font-slab text-tavern-offwhite">Beef</span>
                 <span className="text-tavern-silver">$3</span>
               </div>
               <div className="flex justify-between items-baseline gap-4">
-                <span className="text-tavern-white">Chicken / Steak</span>
+                <span className="font-slab text-tavern-offwhite">Chicken / Steak</span>
                 <span className="text-tavern-silver">$4</span>
               </div>
               <div className="flex justify-between items-baseline gap-4">
-                <span className="text-tavern-white">Fish</span>
+                <span className="font-slab text-tavern-offwhite">Fish</span>
                 <span className="text-tavern-silver">$4</span>
               </div>
               <div className="flex justify-between items-baseline gap-4">
-                <span className="text-tavern-white">Shrimp</span>
+                <span className="font-slab text-tavern-offwhite">Shrimp</span>
                 <span className="text-tavern-silver">$4</span>
               </div>
             </div>
             <h3 className="font-display text-lg font-semibold text-tavern-silver/90 mt-6">Quesadillas</h3>
             <div className="grid gap-3">
               <div className="flex justify-between items-baseline gap-4">
-                <span className="text-tavern-white">Cheese</span>
+                <span className="font-slab text-tavern-offwhite">Cheese</span>
                 <span className="text-tavern-silver">$6</span>
               </div>
               <div className="flex justify-between items-baseline gap-4">
-                <span className="text-tavern-white">Chicken</span>
+                <span className="font-slab text-tavern-offwhite">Chicken</span>
                 <span className="text-tavern-silver">$8.50</span>
               </div>
               <div className="flex justify-between items-baseline gap-4">
-                <span className="text-tavern-white">Steak</span>
+                <span className="font-slab text-tavern-offwhite">Steak</span>
                 <span className="text-tavern-silver">$9.50</span>
               </div>
             </div>
             <div className="pt-4">
               <div className="flex justify-between items-baseline gap-4">
-                <h4 className="font-slab text-base font-medium text-tavern-white">Nachos</h4>
+                <h4 className="font-slab text-base font-medium text-tavern-offwhite">Nachos</h4>
                 <span className="text-tavern-silver whitespace-nowrap">$13</span>
               </div>
               <p className="text-tavern-silver/90 text-sm mt-1">Tortilla chips, cheese, pico de gallo, jalapeños, sour cream, guacamole. Choice of beef, chicken, or steak.</p>
@@ -270,11 +270,11 @@ export default function Menus() {
           </div>
           <div className="space-y-3">
             <div className="flex justify-between items-baseline gap-4">
-              <span className="text-tavern-white">6 Wings</span>
+              <span className="font-slab text-tavern-offwhite">6 Wings</span>
               <span className="text-tavern-silver">$10</span>
             </div>
             <div className="flex justify-between items-baseline gap-4">
-              <span className="text-tavern-white">12 Wings</span>
+              <span className="font-slab text-tavern-offwhite">12 Wings</span>
               <span className="text-tavern-silver">$18</span>
             </div>
             <p className="text-tavern-silver/90 text-sm mt-2">Sauces: Buffalo, BBQ, Garlic Parmesan, Nashville Hot, Honey Sriracha</p>
@@ -288,15 +288,15 @@ export default function Menus() {
           </div>
           <div className="space-y-3">
             <div className="flex justify-between items-baseline gap-4">
-              <span className="text-tavern-white">Draft Beer</span>
+              <span className="font-slab text-tavern-offwhite">Draft Beer</span>
               <span className="text-tavern-silver">$5</span>
             </div>
             <div className="flex justify-between items-baseline gap-4">
-              <span className="text-tavern-white">House Margarita</span>
+              <span className="font-slab text-tavern-offwhite">House Margarita</span>
               <span className="text-tavern-silver">$7</span>
             </div>
             <div className="flex justify-between items-baseline gap-4">
-              <span className="text-tavern-white">Shot Specials</span>
+              <span className="font-slab text-tavern-offwhite">Shot Specials</span>
               <span className="text-tavern-silver">$5</span>
             </div>
           </div>
