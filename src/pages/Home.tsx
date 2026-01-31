@@ -10,15 +10,15 @@ export default function Home() {
   const [emailForm, setEmailForm] = useState({ firstName: '', lastName: '', email: '', location: '' })
 
   const locations = [
-    { name: 'Main Street', address: '123 Main Street, Your City, ST 12345', phone: '(555) 123-4567', slug: 'main-street' },
-    { name: 'Downtown', address: '456 Oak Ave, Downtown, ST 12346', phone: '(555) 987-6543', slug: 'downtown' },
+    { name: 'Main Street', address: '123 Main Street, Your City, ST 12345', phone: '(803) 328-9200', slug: 'main-street' },
+    { name: 'Downtown', address: '456 Oak Ave, Downtown, ST 12346', phone: '(803) 328-9200', slug: 'downtown' },
   ]
 
   const historyItems = [
     { year: '2020', title: 'Outsiders Tavern Opens', desc: 'We opened our doors with a vision to create a neighborhood gathering place for good food and great company.' },
     { year: '2021', title: 'Expanded Menu', desc: 'Launched our full kitchen with chef-inspired pub fare and an extensive craft beer selection.' },
     { year: '2023', title: 'Second Location', desc: 'Opened our Downtown location to serve more of the community.' },
-    { year: '2025', title: 'Private Events Space', desc: 'Unveiled our new private dining room for gatherings and celebrations.' },
+    { year: '2025', title: 'Live Events Stage', desc: 'Launched our weekend live music series, bringing bands to the stage every Friday and Saturday night.' },
   ]
 
   return (
@@ -98,11 +98,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Private Events */}
+      {/* Live Events */}
       <section className="py-20 px-6 bg-tavern-charcoal">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-display text-3xl font-semibold text-tavern-white mb-4">Private Events</h2>
-          <p className="text-tavern-silver mb-8">Host your next celebration with us. [Placeholder content]</p>
+          <h2 className="font-display text-3xl font-semibold text-tavern-white mb-4">Live Events</h2>
+          <p className="text-tavern-silver mb-8">Live bands every weekend. Ready to play? Get in touch.</p>
           <a href="/events" className="inline-block px-8 py-3 bg-white text-tavern-black font-semibold rounded hover:bg-tavern-offwhite transition-colors">
             Learn More
           </a>

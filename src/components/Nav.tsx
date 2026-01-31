@@ -62,7 +62,7 @@ export default function Nav() {
                 </div>
               )}
             </div>
-            <Link to="/events" className="text-tavern-white/90 hover:text-tavern-white transition-colors">Private Events</Link>
+            <Link to="/events" className="text-tavern-white/90 hover:text-tavern-white transition-colors">Live Events</Link>
             <Link to="/gallery" className="text-tavern-white/90 hover:text-tavern-white transition-colors">Photo Gallery</Link>
             <Link to="/" className="text-tavern-white/90 hover:text-tavern-white transition-colors">Gift Cards</Link>
             <Link to="/#reservations" className="px-4 py-2 bg-white text-tavern-black font-semibold rounded hover:bg-tavern-offwhite transition-colors">Reservations</Link>
