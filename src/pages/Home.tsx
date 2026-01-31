@@ -9,13 +9,13 @@ export default function Home() {
   const [emailForm, setEmailForm] = useState({ firstName: '', lastName: '', email: '', location: '' })
 
   const locations = [
-    { name: 'Outsiders Tavern', address: '4124 Celanese Rd Ste 130, Rock Hill, SC 29732', phone: '(803) 328-9200', slug: 'rock-hill', mapsUrl: 'https://maps.google.com/?q=4124+Celanese+Rd+Ste+130+Rock+Hill+SC+29732' },
+    { name: 'Outsiders Tavern', address: '4124 Celanese Rd #130, Rock Hill, SC 29732', phone: '(803) 328-9200', slug: 'rock-hill', mapsUrl: 'https://www.google.com/maps/place/Outsiders+Tavern/@34.9790614,-81.0653751,17z', embedUrl: 'https://www.google.com/maps?q=34.9790614,-81.0653751&z=17&output=embed' },
   ]
 
   const historyItems = [
     { year: '2020', title: 'Outsiders Tavern Opens', desc: 'We opened our doors with a vision to create a neighborhood gathering place for good food and great company.' },
     { year: '2021', title: 'Expanded Menu', desc: 'Launched our full kitchen with chef-inspired pub fare and an extensive craft beer selection.' },
-    { year: '2023', title: 'Settled in Rock Hill', desc: 'Opened our doors at 4124 Celanese Rd, bringing the tavern vibe to Rock Hill.' },
+    { year: '2023', title: 'Settled in Rock Hill', desc: 'Opened our doors at 4124 Celanese Rd #130, bringing the tavern vibe to Rock Hill.' },
     { year: '2025', title: 'Live Events Stage', desc: 'Launched our weekend live music series, bringing bands to the stage every Friday and Saturday night.' },
   ]
 
@@ -46,7 +46,7 @@ export default function Home() {
                 <div className="h-48 w-full overflow-hidden bg-tavern-black">
                   <iframe
                     title="Outsiders Tavern location"
-                    src={`https://www.google.com/maps?q=${encodeURIComponent(loc.address)}&output=embed`}
+                    src={loc.embedUrl}
                     className="w-full h-full border-0"
                     allowFullScreen
                     loading="lazy"
