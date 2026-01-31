@@ -43,8 +43,15 @@ export default function Home() {
           <div id="locations" className="grid md:grid-cols-1 max-w-2xl mx-auto gap-8">
             {locations.map((loc) => (
               <div key={loc.slug} className="bg-tavern-charcoal rounded-lg overflow-hidden border border-tavern-gray">
-                <div className="h-48 bg-tavern-black flex items-center justify-center text-tavern-silver/50">
-                  [Location photo placeholder]
+                <div className="h-48 w-full overflow-hidden bg-tavern-black">
+                  <iframe
+                    title="Outsiders Tavern location"
+                    src={`https://www.google.com/maps?q=${encodeURIComponent(loc.address)}&output=embed`}
+                    className="w-full h-full border-0"
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
                 </div>
                 <div className="p-6">
                   <h3 className="font-display text-2xl font-semibold text-tavern-white">{loc.name}</h3>
