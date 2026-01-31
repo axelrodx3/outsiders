@@ -7,7 +7,7 @@ export default function PrivateEvents() {
           Every weekend, Outsiders Tavern brings the stage to life with live bands from rock and blues to acoustic sets. If you're in a band and want to take the stage, we'd love to hear from you. Reach out and let's make it happen.
         </p>
         <div className="bg-tavern-charcoal rounded-lg p-8 border border-tavern-gray">
-          <h2 className="font-display text-xl font-semibold text-tavern-white mb-4">Bands — Get in Touch</h2>
+          <h2 className="font-display text-xl font-semibold text-tavern-white mb-4">Get in Touch</h2>
           <p className="text-tavern-silver">
             <a href="mailto:outsiderstavern@gmail.com" className="text-tavern-white hover:underline">outsiderstavern@gmail.com</a>
           </p>
