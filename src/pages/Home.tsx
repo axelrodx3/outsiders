@@ -177,10 +177,10 @@ export default function Home() {
       {/* Menus Teaser */}
       <section className="py-20 px-6 bg-tavern-dark">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-display text-3xl font-semibold text-tavern-white mb-4">Menus</h2>
+          <h2 className="font-display text-3xl font-semibold text-tavern-white mb-4">Menu</h2>
           <p className="text-tavern-silver mb-8">Explore our food and drink offerings.</p>
           <a href="/menus" className="inline-block px-8 py-3 border border-tavern-white text-tavern-white rounded hover:bg-tavern-white/10 transition-colors">
-            View Menus
+            View Menu
           </a>
         </div>
       </section>

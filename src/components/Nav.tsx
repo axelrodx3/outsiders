@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const navLinks = [
   { label: 'Location', href: 'https://www.google.com/maps/place/Outsiders+Tavern/@34.9790614,-81.0653751,17z/data=!3m1!5s0x88568eae09eb258f:0xc8db335a5811af29!4m6!3m5!1s0x88568fce8dc218e9:0xd953dc1250cc1476!8m2!3d34.9790614!4d-81.0653751!16s%2Fg%2F11tnv2fdrw?entry=ttu&g_ep=EgoyMDI2MDEyOC4wIKXMDSoASAFQAw%3D%3D', external: true },
-  { label: 'Menus', to: '/menus', external: false },
+  { label: 'Menu', to: '/menus', external: false },
   { label: 'Order', href: 'https://www.doordash.com/store/outsiders-tavern-rock-hill-31872831/48795546/', external: true },
   { label: 'Live Events', to: '/events', external: false },
   { label: 'Photo Gallery', to: '/gallery', external: false },
