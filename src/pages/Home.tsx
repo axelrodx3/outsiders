@@ -1,8 +1,4 @@
-import { useState } from 'react'
-
 export default function Home() {
-  const [emailForm, setEmailForm] = useState({ firstName: '', lastName: '', email: '' })
-
   const locations = [
     { name: 'Outsiders Tavern', address: '4124 Celanese Rd #130, Rock Hill, SC 29732', phone: '(803) 328-9200', slug: 'rock-hill', mapsUrl: 'https://www.google.com/maps/place/Outsiders+Tavern/@34.9790614,-81.0653751,17z', embedUrl: 'https://www.google.com/maps?q=Outsiders+Tavern+4124+Celanese+Rd+Rock+Hill+SC+29732&output=embed' },
   ]
@@ -134,44 +130,6 @@ export default function Home() {
           <div className="text-center mt-6">
             <a href="/gallery" className="text-tavern-silver hover:text-tavern-white transition-colors">View Gallery</a>
           </div>
-        </div>
-      </section>
-
-      {/* Email Signup */}
-      <section className="py-16 px-6 bg-tavern-dark">
-        <div className="max-w-md mx-auto">
-          <h2 className="font-display text-2xl font-semibold text-tavern-white text-center mb-6">Email Signup</h2>
-          <form
-            onSubmit={(e) => e.preventDefault()}
-            className="space-y-4"
-          >
-            <div className="grid grid-cols-2 gap-4">
-              <input
-                type="text"
-                placeholder="First Name"
-                value={emailForm.firstName}
-                onChange={(e) => setEmailForm({ ...emailForm, firstName: e.target.value })}
-                className="px-4 py-2 bg-tavern-charcoal border border-tavern-gray rounded text-tavern-white placeholder-tavern-silver/60"
-              />
-              <input
-                type="text"
-                placeholder="Last Name"
-                value={emailForm.lastName}
-                onChange={(e) => setEmailForm({ ...emailForm, lastName: e.target.value })}
-                className="px-4 py-2 bg-tavern-charcoal border border-tavern-gray rounded text-tavern-white placeholder-tavern-silver/60"
-              />
-            </div>
-            <input
-              type="email"
-              placeholder="Email"
-              value={emailForm.email}
-              onChange={(e) => setEmailForm({ ...emailForm, email: e.target.value })}
-              className="w-full px-4 py-2 bg-tavern-charcoal border border-tavern-gray rounded text-tavern-white placeholder-tavern-silver/60"
-            />
-            <button type="submit" className="w-full py-3 bg-white text-tavern-black font-semibold rounded hover:bg-tavern-offwhite transition-colors">
-              Submit
-            </button>
-          </form>
         </div>
       </section>
     </div>
