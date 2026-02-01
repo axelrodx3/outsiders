@@ -7,6 +7,14 @@ body {
   background-color: #000000;
 }
 
+/* Hide default cursor everywhere when custom cursor is active */
+html.custom-cursor-active,
+html.custom-cursor-active *,
+html.custom-cursor-active *::before,
+html.custom-cursor-active *::after {
+  cursor: none !important;
+}
+
 /* Text outline for better readability - helps older users read white text on dark background */
 .font-display,
 [class*="text-tavern-white"].font-semibold,

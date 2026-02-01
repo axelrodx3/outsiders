@@ -18,11 +18,11 @@ export default function CustomCursor() {
     const handleLeave = () => setVisible(false)
     window.addEventListener('mousemove', handleMove)
     document.body.addEventListener('mouseleave', handleLeave)
-    document.body.style.cursor = 'none'
+    document.documentElement.classList.add('custom-cursor-active')
     return () => {
       window.removeEventListener('mousemove', handleMove)
       document.body.removeEventListener('mouseleave', handleLeave)
-      document.body.style.cursor = ''
+      document.documentElement.classList.remove('custom-cursor-active')
     }
   }, [visible, isHoverDevice])
 
