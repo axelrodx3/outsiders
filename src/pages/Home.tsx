@@ -105,17 +105,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Live Events */}
-      <section className="py-20 px-6 bg-tavern-charcoal">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-display text-3xl font-semibold text-tavern-white mb-4">Live Events</h2>
-          <p className="text-tavern-silver mb-8">Live bands every weekend. Ready to play? Get in touch.</p>
-          <a href="/events" className="inline-block px-8 py-3 bg-white text-tavern-black font-semibold rounded hover:bg-tavern-offwhite transition-colors">
-            Learn More
-          </a>
-        </div>
-      </section>
-
       {/* Photo Gallery Teaser */}
       <section className="py-20 px-6 bg-tavern-dark">
         <div className="max-w-6xl mx-auto">
