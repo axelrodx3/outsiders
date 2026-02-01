@@ -2,8 +2,6 @@ export default function Menus() {
   return (
     <div className="pt-24 pb-20 px-6 text-tavern-white bg-tavern-dark">
       <div className="max-w-3xl mx-auto">
-        <h1 className="font-display text-4xl font-semibold text-tavern-white text-center mb-12">Menu</h1>
-
         {/* Brunch */}
         <section className="mb-12">
           <div className="border-b border-tavern-gray pb-2 mb-6">
