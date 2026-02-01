@@ -45,7 +45,7 @@ export default function Home() {
           <div className="space-y-0">
             <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1 py-3 border-b border-tavern-gray">
               <span className="font-display text-lg text-tavern-white">Tuesday</span>
-              <span className="font-slab text-tavern-offwhite">Tacos $3–4</span>
+              <span className="font-slab text-tavern-offwhite">$3–4 Tacos</span>
             </div>
             <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1 py-3 border-b border-tavern-gray">
               <span className="font-display text-lg text-tavern-white">Wednesday</span>
