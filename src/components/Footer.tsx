@@ -4,9 +4,9 @@ export default function Footer() {
   return (
     <footer className="bg-tavern-black border-t border-tavern-gray py-12 px-6">
       <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-center items-center gap-6">
-          <a href="#" className="text-tavern-silver hover:text-tavern-white transition-colors">Facebook</a>
-          <a href="#" className="text-tavern-silver hover:text-tavern-white transition-colors">Instagram</a>
+        <div className="flex flex-wrap justify-center items-center gap-8">
+          <a href="https://www.facebook.com/profile.php?id=100087661785425" target="_blank" rel="noopener noreferrer" className="text-tavern-silver hover:text-tavern-white transition-colors">Facebook</a>
+          <a href="https://www.yelp.com/biz/outsiders-tavern-rock-hill" target="_blank" rel="noopener noreferrer" className="text-tavern-silver hover:text-tavern-white transition-colors">Yelp</a>
           <Link to="/contact" className="text-tavern-silver hover:text-tavern-white transition-colors">Contact</Link>
         </div>
         <p className="mt-8 text-center text-tavern-silver/80 text-sm">
