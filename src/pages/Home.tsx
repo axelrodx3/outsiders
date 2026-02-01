@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react'
+
 const DAYS = [
   { day: 'Mon', hours: '11:30 AM – 12:00 AM (Next day)', full: 'Monday', closeHour: 0, closeMin: 0 },
   { day: 'Tue', hours: '11:30 AM – 12:00 AM (Next day)', full: 'Tuesday', closeHour: 0, closeMin: 0 },
@@ -26,6 +28,22 @@ export default function Home() {
   const todayIndex = new Date().getDay()
   const currentDayIndex = todayIndex === 0 ? 6 : todayIndex - 1
   const openNow = isOpenNow()
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
+
+  useEffect(() => {
+    if (lightboxIndex === null) return
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setLightboxIndex(null)
+      if (e.key === 'ArrowLeft') setLightboxIndex((prev) => (prev === null ? null : prev === 1 ? 4 : prev - 1))
+      if (e.key === 'ArrowRight') setLightboxIndex((prev) => (prev === null ? null : prev === 4 ? 1 : prev + 1))
+    }
+    document.body.style.overflow = 'hidden'
+    window.addEventListener('keydown', handleKey)
+    return () => {
+      document.body.style.overflow = ''
+      window.removeEventListener('keydown', handleKey)
+    }
+  }, [lightboxIndex])
 
   const locations = [
     { name: 'Outsiders Tavern', address: '4124 Celanese Rd #130, Rock Hill, SC 29732', phone: '(803) 328-9200', slug: 'rock-hill', mapsUrl: 'https://www.google.com/maps/place/Outsiders+Tavern/@34.9790614,-81.0653751,17z', embedUrl: 'https://www.google.com/maps?q=Outsiders+Tavern+4124+Celanese+Rd+Rock+Hill+SC+29732&output=embed' },
@@ -164,9 +182,14 @@ export default function Home() {
           <h2 className="font-display text-3xl font-semibold text-tavern-white text-center mb-8">Photo Gallery</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[1, 2, 3, 4].map((i) => (
-              <a key={i} href="/gallery" className="aspect-square rounded-lg overflow-hidden border border-tavern-gray hover:opacity-90 transition-opacity">
+              <button
+                key={i}
+                type="button"
+                onClick={() => setLightboxIndex(i)}
+                className="aspect-square rounded-lg overflow-hidden border border-tavern-gray hover:opacity-90 transition-opacity focus:outline-none focus:ring-2 focus:ring-tavern-white/50"
+              >
                 <img src={`/gallery/gallery-${i}.png`} alt={`Gallery ${i}`} className="w-full h-full object-cover" />
-              </a>
+              </button>
             ))}
           </div>
           <div className="text-center mt-6">
@@ -174,6 +197,50 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {lightboxIndex !== null && (
+        <div
+          className="fixed inset-0 z-[9999] bg-black/95 flex items-center justify-center p-4 animate-fade-in"
+          onClick={() => setLightboxIndex(null)}
+          role="dialog"
+          aria-modal="true"
+          aria-label="Image lightbox"
+        >
+          <button
+            type="button"
+            onClick={() => setLightboxIndex(null)}
+            className="absolute top-4 right-4 text-tavern-white hover:text-tavern-offwhite text-3xl font-light z-10"
+            aria-label="Close"
+          >
+            ×
+          </button>
+          <button
+            type="button"
+            onClick={(e) => { e.stopPropagation(); setLightboxIndex((prev) => (prev === 1 ? 4 : prev! - 1)) }}
+            className="absolute left-4 top-1/2 -translate-y-1/2 text-tavern-white hover:text-tavern-offwhite text-4xl font-light z-10"
+            aria-label="Previous image"
+          >
+            ‹
+          </button>
+          <button
+            type="button"
+            onClick={(e) => { e.stopPropagation(); setLightboxIndex((prev) => (prev === 4 ? 1 : prev! + 1)) }}
+            className="absolute right-4 top-1/2 -translate-y-1/2 text-tavern-white hover:text-tavern-offwhite text-4xl font-light z-10"
+            aria-label="Next image"
+          >
+            ›
+          </button>
+          <img
+            src={`/gallery/gallery-${lightboxIndex}.png`}
+            alt={`Gallery ${lightboxIndex}`}
+            className="max-w-full max-h-[90vh] object-contain rounded"
+            onClick={(e) => e.stopPropagation()}
+          />
+          <span className="absolute bottom-4 left-1/2 -translate-x-1/2 text-tavern-silver text-sm">
+            {lightboxIndex} / 4
+          </span>
+        </div>
+      )}
     </div>
   )
 }

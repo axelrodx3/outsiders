@@ -16,7 +16,11 @@ html.custom-cursor-active *:hover,
 html.custom-cursor-active *:active,
 html.custom-cursor-active *:focus,
 html.custom-cursor-active *:focus-visible,
-html.custom-cursor-active *:focus-within {
+html.custom-cursor-active *:focus-within,
+html.custom-cursor-active button,
+html.custom-cursor-active button *,
+html.custom-cursor-active a,
+html.custom-cursor-active a * {
   cursor: none !important;
 }
 
