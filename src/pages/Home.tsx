@@ -40,9 +40,13 @@ export default function Home() {
           <img
             src="/logo.png?v=4"
             alt="Outsiders Tavern"
-            className="max-w-[380px] md:max-w-[480px] w-full h-auto mx-auto mb-6"
+            className="max-w-[380px] md:max-w-[480px] w-full h-auto mx-auto mb-6 animate-hero-enter opacity-0"
+            style={{ animationDelay: '0.1s' }}
           />
-          <p className="text-tavern-silver text-lg md:text-xl font-slab max-w-md mx-auto">
+          <p
+            className="text-tavern-silver text-lg md:text-xl font-slab max-w-md mx-auto animate-hero-enter opacity-0"
+            style={{ animationDelay: '0.4s' }}
+          >
             Good food. Cold drinks. Great company.
           </p>
         </div>

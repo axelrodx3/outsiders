@@ -10,6 +10,15 @@ export default {
         display: ['Bebas Neue', 'sans-serif'],
         slab: ['Roboto Slab', 'serif'],
       },
+      keyframes: {
+        'fade-in-up': {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+      },
+      animation: {
+        'hero-enter': 'fade-in-up 0.7s ease-out both',
+      },
       colors: {
         tavern: {
           black: '#0a0a0a',
