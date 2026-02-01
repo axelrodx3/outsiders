@@ -4,12 +4,7 @@
 
 body {
   font-family: 'Roboto Slab', serif;
-  background-color: #0a0a0a;
-}
-
-/* Logo: use solid background to hide any baked-in checkerboard from export */
-img[alt="Outsiders Tavern"] {
-  background: #0a0a0a !important;
+  background-color: #000000;
 }
 
 /* Text outline for better readability - helps older users read white text on dark background */

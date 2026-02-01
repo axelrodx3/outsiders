@@ -6,13 +6,13 @@ export default function Home() {
   return (
     <div className="text-tavern-white">
       {/* Hero - Welcome */}
-      <section className="pt-28 pb-16 px-6 bg-tavern-black">
+      <section className="pt-28 pb-16 px-6 bg-black">
         <h1 className="sr-only">Outsiders Tavern - Restaurant & Bar</h1>
         <div className="max-w-6xl mx-auto text-center">
           <img
-            src="/logo.png?v=3"
+            src="/logo.png?v=4"
             alt="Outsiders Tavern"
-            className="max-w-[280px] md:max-w-[320px] h-auto mx-auto mb-6"
+            className="max-w-[380px] md:max-w-[480px] w-full h-auto mx-auto mb-6"
           />
           <p className="text-tavern-silver text-lg md:text-xl font-slab max-w-md mx-auto">
             Good food. Cold drinks. Great company.
