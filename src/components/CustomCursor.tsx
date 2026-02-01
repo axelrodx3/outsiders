@@ -16,7 +16,7 @@ export default function CustomCursor() {
       setVisible(true)
       rafId = requestAnimationFrame(() => {
         if (elRef.current) {
-          elRef.current.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%) translate(0, -14px)`
+          elRef.current.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%) translate(0, 14px)`
         }
       })
     }
@@ -39,7 +39,7 @@ export default function CustomCursor() {
       ref={elRef}
       className="fixed top-0 left-0 pointer-events-none z-[99999] will-change-transform"
       style={{
-        transform: 'translate(-9999px, -9999px) translate(-50%, -50%) translate(0, -14px)',
+        transform: 'translate(-9999px, -9999px) translate(-50%, -50%) translate(0, 14px)',
         width: '28px',
         height: '28px',
         visibility: visible ? 'visible' : 'hidden',
