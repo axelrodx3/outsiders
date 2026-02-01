@@ -19,10 +19,15 @@ export default {
           '0%, 100%': { opacity: '1', boxShadow: '0 0 0 0 rgba(22, 163, 74, 0.4)' },
           '50%': { opacity: '1', boxShadow: '0 0 0 6px rgba(22, 163, 74, 0)' },
         },
+        'fade-in': {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
       },
       animation: {
         'hero-enter': 'fade-in-up 0.7s ease-out both',
         'open-pulse': 'open-pulse 2s ease-in-out infinite',
+        'fade-in': 'fade-in 0.2s ease-out forwards',
       },
       colors: {
         tavern: {
