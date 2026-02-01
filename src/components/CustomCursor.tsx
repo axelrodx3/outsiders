@@ -33,8 +33,8 @@ export default function CustomCursor() {
       className="fixed top-0 left-0 pointer-events-none z-[9999]"
       style={{
         transform: `translate(${pos.x}px, ${pos.y}px) translate(-50%, -50%)`,
-        width: '20px',
-        height: '20px',
+        width: '28px',
+        height: '28px',
       }}
     >
       <img src="/skull.cur" alt="" className="w-full h-full object-contain" />
