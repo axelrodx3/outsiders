@@ -146,7 +146,7 @@ export default function Home() {
                 <span className="font-display text-lg text-tavern-white flex items-center gap-2">
                   {d.day}
                   {i === currentDayIndex && (
-                    <span className={`text-xs font-slab font-semibold text-white px-2 py-0.5 rounded ${openNow ? 'bg-green-600' : 'bg-red-600'}`}>
+                    <span className={`text-xs font-slab font-semibold text-white px-2 py-0.5 rounded ${openNow ? 'bg-green-600 animate-open-pulse' : 'bg-red-600'}`}>
                       {openNow ? 'Open' : 'Closed'}
                     </span>
                   )}
