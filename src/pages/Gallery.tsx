@@ -51,36 +51,36 @@ export default function Gallery() {
           aria-modal="true"
           aria-label="Image lightbox"
         >
+          <img
+            src={`/gallery/gallery-${lightboxIndex}.png`}
+            alt={`Gallery ${lightboxIndex}`}
+            className="max-w-full max-h-[90vh] object-contain rounded relative z-0"
+            onClick={(e) => e.stopPropagation()}
+          />
           <button
             type="button"
-            onClick={closeLightbox}
-            className="absolute top-4 right-4 text-tavern-white hover:text-tavern-offwhite text-3xl font-light z-10"
+            onClick={(e) => { e.preventDefault(); e.stopPropagation(); closeLightbox() }}
+            className="absolute top-4 right-4 z-[100] p-2 text-tavern-white hover:text-tavern-offwhite text-3xl font-light"
             aria-label="Close"
           >
             ×
           </button>
           <button
             type="button"
-            onClick={(e) => { e.stopPropagation(); goPrev() }}
-            className="absolute left-4 top-1/2 -translate-y-1/2 text-tavern-white hover:text-tavern-offwhite text-4xl font-light z-10"
+            onClick={(e) => { e.preventDefault(); e.stopPropagation(); goPrev() }}
+            className="absolute left-2 top-1/2 -translate-y-1/2 z-[100] p-4 min-w-[48px] text-tavern-white hover:text-tavern-offwhite hover:bg-white/10 rounded text-4xl font-light transition-colors"
             aria-label="Previous image"
           >
             ‹
           </button>
           <button
             type="button"
-            onClick={(e) => { e.stopPropagation(); goNext() }}
-            className="absolute right-4 top-1/2 -translate-y-1/2 text-tavern-white hover:text-tavern-offwhite text-4xl font-light z-10"
+            onClick={(e) => { e.preventDefault(); e.stopPropagation(); goNext() }}
+            className="absolute right-2 top-1/2 -translate-y-1/2 z-[100] p-4 min-w-[48px] text-tavern-white hover:text-tavern-offwhite hover:bg-white/10 rounded text-4xl font-light transition-colors"
             aria-label="Next image"
           >
             ›
           </button>
-          <img
-            src={`/gallery/gallery-${lightboxIndex}.png`}
-            alt={`Gallery ${lightboxIndex}`}
-            className="max-w-full max-h-[90vh] object-contain rounded"
-            onClick={(e) => e.stopPropagation()}
-          />
           <span className="absolute bottom-4 left-1/2 -translate-x-1/2 text-tavern-silver text-sm">
             {lightboxIndex} / {GALLERY_IMAGES}
           </span>
