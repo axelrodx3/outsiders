@@ -38,6 +38,31 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Weekly Specials */}
+      <section className="py-16 px-6 bg-tavern-charcoal">
+        <div className="max-w-2xl mx-auto">
+          <h2 className="font-display text-3xl md:text-4xl font-semibold text-tavern-white text-center mb-10">Specials</h2>
+          <div className="space-y-0">
+            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1 py-3 border-b border-tavern-gray">
+              <span className="font-display text-lg text-tavern-white">Tuesday</span>
+              <span className="font-slab text-tavern-offwhite">Tacos $3–4</span>
+            </div>
+            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1 py-3 border-b border-tavern-gray">
+              <span className="font-display text-lg text-tavern-white">Wednesday</span>
+              <span className="font-slab text-tavern-offwhite">$5 Jamo, Jack Daniel, Jim Beam &amp; Green/Orange Tea</span>
+            </div>
+            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1 py-3 border-b border-tavern-gray">
+              <span className="font-display text-lg text-tavern-white">Thursday</span>
+              <span className="font-slab text-tavern-offwhite">$6 Green/Orange Tea</span>
+            </div>
+            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1 py-3 border-b border-tavern-gray">
+              <span className="font-display text-lg text-tavern-white">Saturday &amp; Sunday</span>
+              <span className="font-slab text-tavern-offwhite">Pitchers $9 · Domestic Buckets $15</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Location Cards */}
       <section className="pt-4 pb-16 px-6 bg-tavern-dark">
         <div className="max-w-6xl mx-auto">
