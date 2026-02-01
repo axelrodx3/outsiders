@@ -12,7 +12,7 @@ export default function Nav() {
             Outsiders Tavern
           </Link>
           <div className="hidden md:flex items-center gap-6">
-            <a href="https://www.google.com/maps/place/Outsiders+Tavern/@34.9790614,-81.0653751,17z" target="_blank" rel="noopener noreferrer" className="text-tavern-white/90 hover:text-tavern-white transition-colors">Location</a>
+            <a href="https://www.google.com/maps/place/Outsiders+Tavern/@34.9790614,-81.0653751,17z/data=!3m1!5s0x88568eae09eb258f:0xc8db335a5811af29!4m6!3m5!1s0x88568fce8dc218e9:0xd953dc1250cc1476!8m2!3d34.9790614!4d-81.0653751!16s%2Fg%2F11tnv2fdrw?entry=ttu&g_ep=EgoyMDI2MDEyOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="text-tavern-white/90 hover:text-tavern-white transition-colors">Location</a>
             {/* Menus */}
             <div
               className="relative"
