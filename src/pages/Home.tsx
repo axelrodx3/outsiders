@@ -24,6 +24,20 @@ export default function Home() {
           </p>
         </div>
       </section>
+
+      {/* Venue Photos */}
+      <section className="py-16 px-6 bg-tavern-dark">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[1, 2, 3, 4].map((i) => (
+              <div key={i} className="aspect-square rounded-lg overflow-hidden border border-tavern-gray">
+                <img src={`/gallery/venue-${i}.png`} alt={`Outsiders Tavern ${i === 1 ? 'exterior' : i === 2 ? 'interior' : i === 3 ? 'patio' : 'stage'}`} className="w-full h-full object-cover" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Location Cards */}
       <section className="pt-4 pb-16 px-6 bg-tavern-dark">
         <div className="max-w-6xl mx-auto">
