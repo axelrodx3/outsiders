@@ -1,16 +1,31 @@
 const DAYS = [
-  { day: 'Mon', hours: '11:30 AM – 12:00 AM (Next day)', full: 'Monday' },
-  { day: 'Tue', hours: '11:30 AM – 12:00 AM (Next day)', full: 'Tuesday' },
-  { day: 'Wed', hours: '11:30 AM – 12:00 AM (Next day)', full: 'Wednesday' },
-  { day: 'Thu', hours: '11:30 AM – 1:00 AM (Next day)', full: 'Thursday' },
-  { day: 'Fri', hours: '11:30 AM – 2:00 AM (Next day)', full: 'Friday' },
-  { day: 'Sat', hours: '11:30 AM – 2:00 AM (Next day)', full: 'Saturday' },
-  { day: 'Sun', hours: '11:30 AM – 12:00 AM (Next day)', full: 'Sunday' },
+  { day: 'Mon', hours: '11:30 AM – 12:00 AM (Next day)', full: 'Monday', closeHour: 0, closeMin: 0 },
+  { day: 'Tue', hours: '11:30 AM – 12:00 AM (Next day)', full: 'Tuesday', closeHour: 0, closeMin: 0 },
+  { day: 'Wed', hours: '11:30 AM – 12:00 AM (Next day)', full: 'Wednesday', closeHour: 0, closeMin: 0 },
+  { day: 'Thu', hours: '11:30 AM – 1:00 AM (Next day)', full: 'Thursday', closeHour: 1, closeMin: 0 },
+  { day: 'Fri', hours: '11:30 AM – 2:00 AM (Next day)', full: 'Friday', closeHour: 2, closeMin: 0 },
+  { day: 'Sat', hours: '11:30 AM – 2:00 AM (Next day)', full: 'Saturday', closeHour: 2, closeMin: 0 },
+  { day: 'Sun', hours: '11:30 AM – 12:00 AM (Next day)', full: 'Sunday', closeHour: 0, closeMin: 0 },
 ]
+
+function isOpenNow(): boolean {
+  const now = new Date()
+  const day = now.getDay()
+  const dayIndex = day === 0 ? 6 : day - 1
+  const minsSinceMidnight = now.getHours() * 60 + now.getMinutes()
+  const openMins = 11 * 60 + 30
+
+  if (minsSinceMidnight >= openMins) return true
+  const yesterdayIndex = (dayIndex + 6) % 7
+  const closeMins = DAYS[yesterdayIndex].closeHour * 60 + DAYS[yesterdayIndex].closeMin
+  if (closeMins > 0 && minsSinceMidnight < closeMins) return true
+  return false
+}
 
 export default function Home() {
   const todayIndex = new Date().getDay()
   const currentDayIndex = todayIndex === 0 ? 6 : todayIndex - 1
+  const openNow = isOpenNow()
 
   const locations = [
     { name: 'Outsiders Tavern', address: '4124 Celanese Rd #130, Rock Hill, SC 29732', phone: '(803) 328-9200', slug: 'rock-hill', mapsUrl: 'https://www.google.com/maps/place/Outsiders+Tavern/@34.9790614,-81.0653751,17z', embedUrl: 'https://www.google.com/maps?q=Outsiders+Tavern+4124+Celanese+Rd+Rock+Hill+SC+29732&output=embed' },
@@ -127,7 +142,9 @@ export default function Home() {
                 <span className="font-display text-lg text-tavern-white flex items-center gap-2">
                   {d.day}
                   {i === currentDayIndex && (
-                    <span className="text-xs font-slab font-normal text-tavern-silver bg-tavern-gray/50 px-2 py-0.5 rounded">Open now</span>
+                    <span className={`text-xs font-slab font-normal px-2 py-0.5 rounded ${openNow ? 'text-tavern-offwhite bg-tavern-gray/50' : 'text-tavern-silver/80 bg-tavern-gray/30'}`}>
+                      {openNow ? 'Open now' : 'Closed'}
+                    </span>
                   )}
                 </span>
                 <span className="font-slab text-tavern-offwhite">{d.hours}</span>
