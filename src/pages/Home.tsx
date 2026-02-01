@@ -30,6 +30,8 @@ export default function Home() {
   const openNow = isOpenNow()
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
   const [venueLightboxIndex, setVenueLightboxIndex] = useState<number | null>(null)
+  const [typedText, setTypedText] = useState('')
+  const TAGLINE = 'Good food. Cold drinks. Great company.'
   const isLightboxOpen = lightboxIndex !== null || venueLightboxIndex !== null
 
   useEffect(() => {
@@ -54,6 +56,20 @@ export default function Home() {
     }
   }, [lightboxIndex, venueLightboxIndex, isLightboxOpen])
 
+  useEffect(() => {
+    setTypedText('')
+    let i = 0
+    const timer = setInterval(() => {
+      if (i <= TAGLINE.length) {
+        setTypedText(TAGLINE.slice(0, i))
+        i++
+      } else {
+        clearInterval(timer)
+      }
+    }, 50)
+    return () => clearInterval(timer)
+  }, [])
+
   const locations = [
     { name: 'Outsiders Tavern', address: '4124 Celanese Rd #130, Rock Hill, SC 29732', phone: '(803) 328-9200', slug: 'rock-hill', mapsUrl: 'https://www.google.com/maps/place/Outsiders+Tavern/@34.9790614,-81.0653751,17z', embedUrl: 'https://www.google.com/maps?q=Outsiders+Tavern+4124+Celanese+Rd+Rock+Hill+SC+29732&output=embed' },
   ]
@@ -71,10 +87,11 @@ export default function Home() {
             style={{ animationDelay: '0.1s' }}
           />
           <p
-            className="text-tavern-silver text-lg md:text-xl font-slab max-w-md mx-auto animate-hero-enter opacity-0"
+            className="text-tavern-silver text-lg md:text-xl font-slab max-w-md mx-auto animate-hero-enter opacity-0 min-h-[1.5em]"
             style={{ animationDelay: '0.4s' }}
           >
-            Good food. Cold drinks. Great company.
+            {typedText}
+            {typedText.length < TAGLINE.length && <span className="animate-pulse">|</span>}
           </p>
         </div>
       </section>
