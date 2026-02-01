@@ -7,8 +7,9 @@ body {
   background-color: #0a0a0a;
 }
 
+/* Logo: use solid background to hide any baked-in checkerboard from export */
 img[alt="Outsiders Tavern"] {
-  background: transparent !important;
+  background: #0a0a0a !important;
 }
 
 /* Text outline for better readability - helps older users read white text on dark background */

@@ -10,10 +10,9 @@ export default function Home() {
         <h1 className="sr-only">Outsiders Tavern - Restaurant & Bar</h1>
         <div className="max-w-6xl mx-auto text-center">
           <img
-            src="/logo.png?v=2"
+            src="/logo.png?v=3"
             alt="Outsiders Tavern"
-            className="max-w-[280px] md:max-w-[320px] h-auto mx-auto mb-6 [filter:invert(1)]"
-            style={{ background: 'transparent' }}
+            className="max-w-[280px] md:max-w-[320px] h-auto mx-auto mb-6"
           />
           <p className="text-tavern-silver text-lg md:text-xl font-slab max-w-md mx-auto">
             Good food. Cold drinks. Great company.
