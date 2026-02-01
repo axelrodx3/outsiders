@@ -12,7 +12,6 @@ export default function Nav() {
             <Link to="/menus" className="text-tavern-white/90 hover:text-tavern-white transition-colors">Menus</Link>
             <Link to="/events" className="text-tavern-white/90 hover:text-tavern-white transition-colors">Live Events</Link>
             <Link to="/gallery" className="text-tavern-white/90 hover:text-tavern-white transition-colors">Photo Gallery</Link>
-          </div>
         </div>
       </div>
     </nav>
