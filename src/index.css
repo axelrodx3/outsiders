@@ -5,6 +5,7 @@
 body {
   font-family: 'Roboto Slab', serif;
   background-color: #000000;
+  cursor: url('/skull.cur'), auto;
 }
 
 /* Text outline for better readability - helps older users read white text on dark background */
