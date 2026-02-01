@@ -12,7 +12,7 @@ export default function Nav() {
             Outsiders Tavern
           </Link>
           <div className="hidden md:flex items-center gap-6">
-            <a href="/#locations" className="text-tavern-white/90 hover:text-tavern-white transition-colors">Location</a>
+            <a href="https://www.google.com/maps/place/Outsiders+Tavern/@34.9790614,-81.0653751,17z" target="_blank" rel="noopener noreferrer" className="text-tavern-white/90 hover:text-tavern-white transition-colors">Location</a>
             {/* Menus */}
             <div
               className="relative"
@@ -29,25 +29,8 @@ export default function Nav() {
                 </div>
               )}
             </div>
-            {/* About Us */}
-            <div
-              className="relative"
-              onMouseEnter={() => setOpenDropdown('about')}
-              onMouseLeave={() => setOpenDropdown(null)}
-            >
-              <button className="text-tavern-white/90 hover:text-tavern-white transition-colors">
-                About Us ▾
-              </button>
-              {openDropdown === 'about' && (
-                <div className="absolute top-full left-0 mt-1 py-2 w-48 bg-tavern-charcoal rounded shadow-xl border border-tavern-gray">
-                  <Link to="/about" className="block px-4 py-2 text-tavern-white/90 hover:bg-tavern-gray hover:text-tavern-white">Our Team</Link>
-                  <Link to="/about" className="block px-4 py-2 text-tavern-white/90 hover:bg-tavern-gray hover:text-tavern-white">FAQs</Link>
-                </div>
-              )}
-            </div>
             <Link to="/events" className="text-tavern-white/90 hover:text-tavern-white transition-colors">Live Events</Link>
             <Link to="/gallery" className="text-tavern-white/90 hover:text-tavern-white transition-colors">Photo Gallery</Link>
-            <Link to="/" className="text-tavern-white/90 hover:text-tavern-white transition-colors">Gift Cards</Link>
           </div>
         </div>
       </div>
