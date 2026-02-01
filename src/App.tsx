@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
+import CustomCursor from './components/CustomCursor'
 import Home from './pages/Home'
 import Menus from './pages/Menus'
 import About from './pages/About'
@@ -11,6 +12,7 @@ import Contact from './pages/Contact'
 function App() {
   return (
     <BrowserRouter>
+      <CustomCursor />
       <div className="min-h-screen bg-black text-tavern-white">
         <Nav />
         <main>
