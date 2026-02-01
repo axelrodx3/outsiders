@@ -37,7 +37,7 @@ export default function CustomCursor() {
   return (
     <div
       ref={elRef}
-      className="fixed top-0 left-0 pointer-events-none z-[9999] will-change-transform"
+      className="fixed top-0 left-0 pointer-events-none z-[99999] will-change-transform"
       style={{
         transform: 'translate(-9999px, -9999px) translate(-50%, -50%)',
         width: '28px',
