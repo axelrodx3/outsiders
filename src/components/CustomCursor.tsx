@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 export default function CustomCursor() {
-  const [pos, setPos] = useState({ x: -100, y: -100 })
+  const elRef = useRef<HTMLDivElement>(null)
   const [visible, setVisible] = useState(false)
   const [isHoverDevice, setIsHoverDevice] = useState(false)
 
@@ -11,33 +11,41 @@ export default function CustomCursor() {
 
   useEffect(() => {
     if (!isHoverDevice) return
+    let rafId: number
     const handleMove = (e: MouseEvent) => {
-      setPos({ x: e.clientX, y: e.clientY })
-      if (!visible) setVisible(true)
+      setVisible(true)
+      rafId = requestAnimationFrame(() => {
+        if (elRef.current) {
+          elRef.current.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%)`
+        }
+      })
     }
     const handleLeave = () => setVisible(false)
-    window.addEventListener('mousemove', handleMove)
+    window.addEventListener('mousemove', handleMove, { passive: true })
     document.body.addEventListener('mouseleave', handleLeave)
     document.documentElement.classList.add('custom-cursor-active')
     return () => {
+      cancelAnimationFrame(rafId)
       window.removeEventListener('mousemove', handleMove)
       document.body.removeEventListener('mouseleave', handleLeave)
       document.documentElement.classList.remove('custom-cursor-active')
     }
-  }, [visible, isHoverDevice])
+  }, [isHoverDevice])
 
-  if (!isHoverDevice || !visible) return null
+  if (!isHoverDevice) return null
 
   return (
     <div
-      className="fixed top-0 left-0 pointer-events-none z-[9999]"
+      ref={elRef}
+      className="fixed top-0 left-0 pointer-events-none z-[9999] will-change-transform"
       style={{
-        transform: `translate(${pos.x}px, ${pos.y}px) translate(-50%, -50%)`,
+        transform: 'translate(-9999px, -9999px) translate(-50%, -50%)',
         width: '28px',
         height: '28px',
+        visibility: visible ? 'visible' : 'hidden',
       }}
     >
-      <img src="/skull.cur" alt="" className="w-full h-full object-contain" />
+      <img src="/skull.cur" alt="" className="w-full h-full object-contain select-none" draggable={false} />
     </div>
   )
 }
